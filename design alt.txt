@@ -1,0 +1,2 @@
+in the logic unit we had two alternatives for negation:
+	negate rs using dedicated inverter or invert in the logic gate and use xor for cadd

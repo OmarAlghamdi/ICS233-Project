@@ -694,4 +694,90 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="Rt"/>
     </comp>
   </circuit>
+  <circuit name="Shifter">
+    <a name="circuit" val="Shifter"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <wire from="(150,210)" to="(340,210)"/>
+    <wire from="(720,130)" to="(720,140)"/>
+    <wire from="(470,140)" to="(720,140)"/>
+    <wire from="(160,120)" to="(280,120)"/>
+    <wire from="(340,100)" to="(390,100)"/>
+    <wire from="(750,150)" to="(750,240)"/>
+    <wire from="(720,130)" to="(760,130)"/>
+    <wire from="(680,90)" to="(680,120)"/>
+    <wire from="(500,160)" to="(500,190)"/>
+    <wire from="(500,160)" to="(730,160)"/>
+    <wire from="(390,150)" to="(430,150)"/>
+    <wire from="(390,100)" to="(430,100)"/>
+    <wire from="(390,200)" to="(430,200)"/>
+    <wire from="(390,250)" to="(430,250)"/>
+    <wire from="(730,140)" to="(730,160)"/>
+    <wire from="(470,190)" to="(500,190)"/>
+    <wire from="(750,320)" to="(780,320)"/>
+    <wire from="(470,90)" to="(680,90)"/>
+    <wire from="(730,140)" to="(760,140)"/>
+    <wire from="(800,140)" to="(890,140)"/>
+    <wire from="(410,130)" to="(430,130)"/>
+    <wire from="(410,80)" to="(430,80)"/>
+    <wire from="(410,180)" to="(430,180)"/>
+    <wire from="(410,230)" to="(430,230)"/>
+    <wire from="(780,160)" to="(780,320)"/>
+    <wire from="(340,100)" to="(340,210)"/>
+    <wire from="(280,80)" to="(280,120)"/>
+    <wire from="(470,240)" to="(750,240)"/>
+    <wire from="(410,80)" to="(410,130)"/>
+    <wire from="(410,130)" to="(410,180)"/>
+    <wire from="(410,180)" to="(410,230)"/>
+    <wire from="(390,200)" to="(390,250)"/>
+    <wire from="(390,100)" to="(390,150)"/>
+    <wire from="(390,150)" to="(390,200)"/>
+    <wire from="(680,120)" to="(760,120)"/>
+    <wire from="(280,80)" to="(410,80)"/>
+    <wire from="(750,150)" to="(760,150)"/>
+    <comp lib="0" loc="(750,320)" name="Pin">
+      <a name="width" val="2"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="contSig"/>
+    </comp>
+    <comp lib="3" loc="(470,140)" name="Shifter">
+      <a name="width" val="32"/>
+      <a name="shift" val="lr"/>
+    </comp>
+    <comp lib="0" loc="(890,140)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="Rt"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="3" loc="(470,190)" name="Shifter">
+      <a name="width" val="32"/>
+      <a name="shift" val="ar"/>
+    </comp>
+    <comp lib="0" loc="(160,120)" name="Pin">
+      <a name="width" val="32"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="Rs"/>
+    </comp>
+    <comp lib="3" loc="(470,90)" name="Shifter">
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(150,210)" name="Pin">
+      <a name="width" val="5"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="Imm"/>
+    </comp>
+    <comp lib="2" loc="(800,140)" name="Multiplexer">
+      <a name="select" val="2"/>
+      <a name="width" val="32"/>
+      <a name="enable" val="false"/>
+    </comp>
+    <comp lib="3" loc="(470,240)" name="Shifter">
+      <a name="width" val="32"/>
+      <a name="shift" val="rr"/>
+    </comp>
+  </circuit>
 </project>
