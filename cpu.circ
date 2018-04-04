@@ -68,6 +68,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(820,340)" to="(820,470)"/>
     <wire from="(380,470)" to="(820,470)"/>
     <comp lib="4" loc="(890,300)" name="RAM"/>
+    <comp loc="(590,290)" name="ALU"/>
     <comp lib="4" loc="(330,310)" name="RAM"/>
     <comp lib="0" loc="(510,110)" name="Bit Extender">
       <a name="in_width" val="5"/>
@@ -76,7 +77,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </comp>
     <comp loc="(430,300)" name="RegisterFile"/>
     <comp lib="0" loc="(80,470)" name="Clock"/>
-    <comp loc="(590,310)" name="ALU"/>
   </circuit>
   <circuit name="RegisterFile">
     <a name="circuit" val="RegisterFile"/>
@@ -86,6 +86,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(110,180)" to="(170,180)"/>
     <wire from="(990,180)" to="(1050,180)"/>
     <wire from="(1000,350)" to="(1060,350)"/>
+    <wire from="(110,270)" to="(160,270)"/>
     <wire from="(1010,130)" to="(1010,160)"/>
     <wire from="(1020,300)" to="(1020,330)"/>
     <wire from="(470,550)" to="(470,570)"/>
@@ -250,7 +251,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(980,130)" to="(1010,130)"/>
     <wire from="(990,300)" to="(1020,300)"/>
     <wire from="(580,520)" to="(670,520)"/>
-    <wire from="(80,270)" to="(160,270)"/>
     <wire from="(450,580)" to="(460,580)"/>
     <wire from="(160,270)" to="(240,270)"/>
     <wire from="(510,550)" to="(580,550)"/>
@@ -483,6 +483,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="width" val="32"/>
+      <a name="label" val="sBus"/>
       <a name="labelloc" val="east"/>
     </comp>
     <comp lib="1" loc="(580,590)" name="Controlled Buffer">
@@ -507,19 +508,17 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <comp lib="0" loc="(130,60)" name="Pin">
       <a name="width" val="3"/>
       <a name="tristate" val="false"/>
+      <a name="label" val="Rd"/>
     </comp>
     <comp lib="1" loc="(820,250)" name="AND Gate">
       <a name="facing" val="south"/>
       <a name="inputs" val="2"/>
     </comp>
-    <comp lib="0" loc="(80,270)" name="Pin">
-      <a name="width" val="32"/>
-      <a name="tristate" val="false"/>
-    </comp>
     <comp lib="0" loc="(960,190)" name="Pin">
       <a name="facing" val="north"/>
       <a name="width" val="3"/>
       <a name="tristate" val="false"/>
+      <a name="label" val="Rs"/>
     </comp>
     <comp lib="0" loc="(560,580)" name="Tunnel">
       <a name="facing" val="east"/>
@@ -545,6 +544,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="facing" val="north"/>
       <a name="width" val="3"/>
       <a name="tristate" val="false"/>
+      <a name="label" val="Rt"/>
     </comp>
     <comp lib="0" loc="(1060,210)" name="Tunnel">
       <a name="label" val="buf8"/>
@@ -554,6 +554,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </comp>
     <comp lib="0" loc="(110,180)" name="Pin">
       <a name="tristate" val="false"/>
+      <a name="label" val="writeSig"/>
     </comp>
     <comp lib="1" loc="(530,250)" name="AND Gate">
       <a name="facing" val="south"/>
@@ -574,6 +575,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="width" val="32"/>
+      <a name="label" val="tBus"/>
       <a name="labelloc" val="east"/>
     </comp>
     <comp lib="1" loc="(630,250)" name="AND Gate">
@@ -612,6 +614,11 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     </comp>
     <comp lib="0" loc="(1060,230)" name="Tunnel">
       <a name="label" val="buf9"/>
+    </comp>
+    <comp lib="0" loc="(110,270)" name="Pin">
+      <a name="width" val="32"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="dBus"/>
     </comp>
     <comp lib="1" loc="(960,440)" name="Controlled Buffer">
       <a name="facing" val="south"/>
