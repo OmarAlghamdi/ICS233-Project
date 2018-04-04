@@ -1,2 +1,4 @@
 in the logic unit we had two alternatives for negation:
 	negate rs using dedicated inverter or invert in the logic gate and use xor for cadd
+for shifter: we are using zero extension for imm instead of bits extraction
+	we cannot. now we extract bits
