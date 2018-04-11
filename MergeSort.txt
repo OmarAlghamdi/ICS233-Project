@@ -1,0 +1,4 @@
+lw $r0, $r0, 0
+j DONE
+
+DONE:	j DONE
