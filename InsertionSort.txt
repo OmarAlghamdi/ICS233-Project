@@ -1,0 +1,26 @@
+lw $r0, $r0, 1					# load r1 with the first address of the array
+lw $r1, $r1, 0					# array size
+jal insertion					# call insertion sort
+j DONE							# end of the program
+
+insertion:	ori $r2, $r2, 1		# i=1
+		loop1	add $r6, $r0, $r2
+				lw $r3, $r6, 0
+				addi $r4, $r2, -1
+			loop2:	add $r6, $r4, $r0
+					lw $t5, $r6, 0
+					bltz $t4, replace
+					slt $r7, $r3, $r5
+					beqz $r7, replace
+					add $r6, $r4, $r0
+					sw $r5, $r6, 1
+					addi $r4, $r4, -1
+					j loop2
+			replace:	add $r6, $r4, $r0
+						sw $r3, $r6, 1
+						addi $r2, $r2, 1
+						slt $r7, $r2, $r1
+						beqz $r7, DONE
+						j loop1
+
+DONE:	j DONE					# END
