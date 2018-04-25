@@ -1,0 +1,35 @@
+ori $r6, $r6, -1				# stack pointer
+lw $r0, $r0, 1					# load r1 with the first address of the array
+lw $r1, $r1, 0					# array size
+jal merge_sort					# call merge sort
+j DONE							# end of the program
+
+merge_sort:	addi $r0, $r0, -1	# checks the size
+			bgtz $r0, RECU		# goto the recursive case
+			jr $r7, 0				# the base case. no need to sort
+	RECU:	addi $r6, $r6, -4	# allocate 4 word on the stack
+			sw $r0, $r6, 2		# store array address
+			sw $r1, $r6, 1		# store the size of the array
+			sw $r7, $r6, 0		# store the return address
+			srl $r2, $r1, 1		# r2 = m = n/2
+			sw $r2, $r6, 3		# store m
+			lw $r0, $r6, 2		
+			lw $r1, $r6, 3
+			jal	merge_sort		# sort the first half
+			lw $r2, $r6, 3
+			lw $r1, r6, 1
+			nadd $r1, $r2, $r1
+			sll $r2, $r2, 2
+			lw $r0, $r6, 2
+			add $r0, $r0, $r2
+			jal merge_sort		# sort the second half
+			lw $r0, $r6, 2
+			lw $r1, $r6, 1
+			jal merge			# merge the two halves
+			lw $r7, $r6, 0
+			addi $r6, $r6, 4	# deallocate the stack
+			jr $r7, 0			# return
+			
+merge:					
+			
+DONE:	j DONE					# END
