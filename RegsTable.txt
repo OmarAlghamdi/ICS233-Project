@@ -1,0 +1,9 @@
+Regfile[0] = 1
+Regfile[1] = 0
+Regfile[2] = 0
+Regfile[3] = 0
+Regfile[4] = 0
+Regfile[5] = 0
+Regfile[6] = 0
+Regfile[7] = 0
+Program Counter [PC] = 1
